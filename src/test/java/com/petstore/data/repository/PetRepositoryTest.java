@@ -167,4 +167,18 @@ class PetRepositoryTest {
         //assert that updated field has changed
         assertThat(pet.getName()).isEqualTo("Jess");
     }
+
+    @Test
+    void whenIDeletePetFromDatabase_petIsDeleted(){
+        //check if pet exists
+       //assert that pet exists
+        assertThat(petRepository.existsById(35)).isTrue();
+
+        //delete pet
+        petRepository.deleteById(35);
+
+        //check if pet exists
+        //assert that pet does not exist
+        assertThat(petRepository.existsById(35)).isFalse();
+    }
 }

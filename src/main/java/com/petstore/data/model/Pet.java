@@ -25,7 +25,7 @@ public class Pet {
     @Enumerated(EnumType.STRING)
     private Gender petGender;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @ToString.Exclude
     private Store store;
 }
