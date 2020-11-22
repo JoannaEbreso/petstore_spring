@@ -4,7 +4,9 @@ truncate table pet;
 truncate table store;
 
 INSERT INTO store(`id`,`name`,`location`,`contact_no`)
-VALUES (21,'super store','nassarawa','90845364387');
+VALUES (21,'super store','nassarawa','90845364387'),
+(22,'mini store','toronto','563883849'),
+(23,'green store','lagos','68384292');
 
 INSERT INTO pet(`id`,`name`,`color`,`breed`,`age`,`pet_gender`,`store_id`)
 VALUES (31,'Jill','blue','parrot',6,'MALE',21),

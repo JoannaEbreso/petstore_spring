@@ -1,5 +1,6 @@
 package com.petstore.data.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.ToString;
 
@@ -7,6 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
+@ToString
 public class Pet {
 
     @Id
@@ -27,5 +29,6 @@ public class Pet {
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     @ToString.Exclude
+    @JsonIgnore
     private Store store;
 }

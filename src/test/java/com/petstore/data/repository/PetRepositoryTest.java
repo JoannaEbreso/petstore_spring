@@ -77,10 +77,14 @@ class PetRepositoryTest {
         store.setContactNo("234567890");
 
         log.info("Store instance before saving --> {}", store);
+
+        storeRepository.save(store);
+
         //map pet to store
         pet.setStore(store);
 
         petRepository.save(pet);
+
         log.info("Pet instance after saving --> {}", pet);
         log.info("Store instance after saving --> {}", store);
 
